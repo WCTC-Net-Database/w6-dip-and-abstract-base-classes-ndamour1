@@ -6,6 +6,8 @@ namespace W6_assignment_template.Data
     {
         List<CharacterBase> Characters { get; set; }
 
+        List<CharacterBase> GetCharacterList(string characterType);
+
         void AddCharacter(CharacterBase character);
 
         void UpdateCharacter(CharacterBase character);
