@@ -185,4 +185,4 @@ public class Warrior : CharacterBase
 17. **GameEngine** - multiple private readonly variables are made to initialize the data context, lists of all or some of the characters, a list to put the various rooms in, and the characters themselves. They are then defined in the GameEngine constructor.
 18. **Run** - the game will not run if the characters, rooms, or both are null. It also features an introduction of the "game" and variables pertaining to each of the various rooms.
 19. **SetUpRooms** - a method in the GameEngine class that uses the RoomFactory interface to return an IRoom object of one of a requested type of room.
-20. **ConfigureServices** - this method in the Program class has been updated to account for the room-based methods.
+20. **ConfigureServices** - this method in the Program class has been updated to account for the room-based classes & interfaces.
