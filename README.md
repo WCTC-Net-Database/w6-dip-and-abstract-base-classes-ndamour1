@@ -162,3 +162,27 @@ public class Warrior : CharacterBase
 - They may not align with your existing code, and the use of this template is optional.
 - The instructions are written with your own implementation in mind, so feel free to adapt them to your specific needs.
 - Using this template may help you structure your code and ensure you meet all the requirements.
+ 
+---
+
+### New Behavior Documentation
+1. **GetCharacterList** - a new method in the IContext interface, that is then inherited by the DataContext class, that returns a list of characters that are from a deisgnated
+2. **IRoom** - an interface used throughout the program to instantialize rooms for lists and for characters to enter and interact with one another.
+3. **RoomBase** - a class that inherits from the IRoom interface that defines the properties of a room.
+4. **Gold** - all characters now have a Gold int variable to keep track of their money (or lack thereof).
+5. **CurrentRoom** - a variable in the CharacterBase class used to instantialize which room a character is currently in. This is inherited by all classes that inherit from CharacterBase.
+6. **Attack** - the attack method is updated so that the player is able to use the weapons in their equipment against enemies. It also utilizes the ILootable interface below to loot dead goblins of their treasure.
+7. **Enter** - a method in the CharacterBase class that initiates the process of characters entering another room in the building. This is inherited by all classes that inherit from CharacterBase.
+8. **MoveToRoom** - a method in the CharacterBase class that determines which direction the door to another room a character wants to enter. This is inherited by all classes that inherit from CharacterBase.
+9. **Look** - a method in the Player class that allows the player character to see into one of the rooms connected to the one they are currently in.
+10. **IEquipment** - an interface in the Player class that it inherits from to instantialize the equipment the player character has on hand.
+11. **Equipment** - a string variable in the Player class inherited from the IEquipment interface that stores the player character's equipment.
+12. **ILootable** - an interface in the Goblin class that it inherits from to instantialize the idea that the player can loot the goblins of any treasure they have.
+13. **Treasure** - a string variable in the Goblin and Ghost classes that instantiates an enemy's treasure (or lack thereof).
+14. **UniqueBehavior** - the Ghost class has a unique behavior that allows them to phase through attacks.
+15. **IRoomFactory** - an interface that instantiates the CreateRoom method.
+16. **RoomBase** - a class that inherits the CreateRoom method from the IRoomFactory interfaces to create different types of rooms.
+17. **GameEngine** - multiple private readonly variables are made to initialize the data context, lists of all or some of the characters, a list to put the various rooms in, and the characters themselves. They are then defined in the GameEngine constructor.
+18. **Run** - the game will not run if the characters, rooms, or both are null. It also features an introduction of the "game" and variables pertaining to each of the various rooms.
+19. **SetUpRooms** - a method in the GameEngine class that uses the RoomFactory interface to return an IRoom object of one of a requested type of room.
+20. **ConfigureServices** - this method in the Program class has been updated to account for the room-based methods.
