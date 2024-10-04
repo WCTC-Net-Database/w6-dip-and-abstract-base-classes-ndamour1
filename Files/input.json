@@ -1,51 +1,56 @@
-﻿[
+[
   {
-    "$type": "W6_assignment_template.Models.Player",
+    "$type": "W6_assignment_template.Models.Characters.Player",
     "Name": "Brave Sir Robin",
     "Type": "Fighter",
     "Level": 1,
     "HP": 10,
-    "Equipment": "sword|shield|potion",
-    "Gold": 50
+    "Gold": 50,
+    "Equipment": "sword|shield|potion"
   },
   {
-    "$type": "W6_assignment_template.Models.Goblin",
+    "$type": "W6_assignment_template.Models.Characters.Goblin",
     "Name": "Bob Goblin",
     "Type": "Goblin",
     "Level": 1,
     "HP": 5,
+    "Gold": 10,
     "Treasure": "club"
   },
   {
-    "$type": "W6_assignment_template.Models.Goblin",
+    "$type": "W6_assignment_template.Models.Characters.Goblin",
     "Name": "Tom Goblin",
     "Type": "Goblin",
     "Level": 1,
     "HP": 5,
+    "Gold": 0,
     "Treasure": null
   },
   {
-    "$type": "W6_assignment_template.Models.Goblin",
+    "$type": "W6_assignment_template.Models.Characters.Goblin",
     "Name": "Boss Goblin",
     "Type": "Goblin",
     "Level": 1,
     "HP": 10,
+    "Gold": 10,
     "Treasure": "leather armor"
   },
   {
-    "$type": "W6_assignment_template.Models.Ghost",
+    "$type": "W6_assignment_template.Models.Characters.Ghost",
     "Name": "Silent Ghost",
     "Type": "Ghost",
     "Level": 2,
     "HP": 8,
+    "Gold": 10,
     "Treasure": "cloak"
   },
   {
-    "$type": "W6_assignment_template.Models.Ghost",
+    "$type": "W6_assignment_template.Models.Characters.Ghost",
     "Name": "Scary Ghost",
     "Type": "Ghost",
     "Level": 2,
     "HP": 8,
+    "Gold": 0,
     "Treasure": null
   }
 ]
