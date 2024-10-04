@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using W6_assignment_template.Data;
+using W6_assignment_template.Interfaces;
+using W6_assignment_template.Models;
 using W6_assignment_template.Services;
 
 namespace W6_assignment_template
@@ -21,6 +23,8 @@ namespace W6_assignment_template
         {
             services.AddSingleton<IContext, DataContext>();
             services.AddTransient<GameEngine>();
+            services.AddSingleton<IRoomFactory, RoomFactory>();
+            services.AddSingleton<IRoom, RoomBase>();
         }
     }
 }
