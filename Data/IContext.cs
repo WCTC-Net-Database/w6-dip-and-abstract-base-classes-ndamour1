@@ -13,6 +13,5 @@ namespace W6_assignment_template.Data
         void UpdateCharacter(CharacterBase character);
 
         void DeleteCharacter(string characterName);
-
     }
 }
