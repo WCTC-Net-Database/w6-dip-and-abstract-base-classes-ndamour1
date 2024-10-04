@@ -27,6 +27,44 @@ namespace W6_assignment_template.Data
             Characters = JsonSerializer.Deserialize<List<CharacterBase>>(jsonData, options); // Load all character types
         }
 
+        public List<CharacterBase> GetCharacterList(string characterType)
+        {
+            List<CharacterBase> characters = new List<CharacterBase>();
+        
+            switch (characterType)
+            {
+                default:
+                    throw new NotSupportedException($"Type {characterType} is not supported");
+                case "Ghost":
+                    for (int i = 0; i < Characters.Count; ++i)
+                    {
+                        if (Characters[i] is Ghost)
+                        {
+                            characters.Add(Characters[i]);
+                        }
+                    }
+                    return characters;
+                case "Goblin":
+                    for (int i = 0; i < Characters.Count; ++i)
+                    {
+                        if (Characters[i] is Goblin)
+                        {
+                            characters.Add(Characters[i]);
+                        }
+                    }
+                    return characters;
+                case "Player":
+                    for (int i = 0; i < Characters.Count; ++i)
+                    {
+                        if (Characters[i] is Player)
+                        {
+                            characters.Add(Characters[i]);
+                        }
+                    }
+                    return characters;
+            }
+        }
+
         public void AddCharacter(CharacterBase character)
         {
             Characters.Add(character);
