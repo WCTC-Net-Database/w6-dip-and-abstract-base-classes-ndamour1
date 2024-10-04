@@ -1,11 +1,15 @@
-﻿namespace W6_assignment_template.Models
+using W6_assignment_template.Interfaces;
+
+namespace W6_assignment_template.Models.Characters
 {
     public class Goblin : CharacterBase, ILootable
     {
         public string Treasure { get; set; }
 
-        public Goblin(string name, string type, int level, int hp, string treasure)
-            : base(name, type, level, hp)
+        public Goblin() : base() { }
+
+        public Goblin(string name, string type, int level, int hp, int gold, string treasure, IRoom startingRoom)
+            : base(name, type, level, hp, gold, startingRoom)
         {
             Treasure = treasure;
         }
