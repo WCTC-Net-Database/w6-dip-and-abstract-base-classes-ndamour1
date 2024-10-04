@@ -1,6 +1,6 @@
 using W6_assignment_template.Interfaces;
 
-namespace W6_assignment_template.Models.Characters
+namespace W6_assignment_template.Models
 {
     public class Goblin : CharacterBase, ILootable
     {
